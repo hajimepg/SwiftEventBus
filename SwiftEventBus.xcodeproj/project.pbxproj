@@ -22,6 +22,8 @@
 		6195C5561A85B9AB00E83058 /* EventBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6195C5551A85B9AB00E83058 /* EventBusTests.swift */; };
 		61E116481AD7E9EB00D18562 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619F7E991AD7E92C001F7246 /* Alamofire.framework */; };
 		61E116491AD7E9EB00D18562 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 619F7E991AD7E92C001F7246 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFC88D841D8579F3005404DC /* SwiftEventBus-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC88D831D8579F3005404DC /* SwiftEventBus-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFC88D891D857A24005404DC /* SwiftEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A66A51A85BAD80046DEB8 /* SwiftEventBus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,9 @@
 		6195C5551A85B9AB00E83058 /* EventBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBusTests.swift; sourceTree = "<group>"; };
 		619F7E911AD7E92C001F7246 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "libs/Alamofire-xcode-6.3/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		83CD738C74C64372C6858E71 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EFC88D811D8579F3005404DC /* SwiftEventBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftEventBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC88D831D8579F3005404DC /* SwiftEventBus-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftEventBus-OSX.h"; sourceTree = "<group>"; };
+		EFC88D851D8579F3005404DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7D82590F8C5F24BE5317715 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,6 +150,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6195C54F1A85B9AB00E83058 /* SwiftEventBus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC88D7D1D8579F3005404DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +225,7 @@
 				6195C5451A85B9AB00E83058 /* SwiftEventBus */,
 				6195C5521A85B9AB00E83058 /* SwiftEventBusTests */,
 				613A66841A85BA390046DEB8 /* Example */,
+				EFC88D821D8579F3005404DC /* SwiftEventBus-OSX */,
 				6195C5441A85B9AB00E83058 /* Products */,
 				CE592E1FB23AC1C56647CAC8 /* Pods */,
 				E6A35EA15BB88700A185CC56 /* Frameworks */,
@@ -225,6 +238,7 @@
 				6195C5431A85B9AB00E83058 /* SwiftEventBus.framework */,
 				6195C54E1A85B9AB00E83058 /* SwiftEventBusTests.xctest */,
 				613A66831A85BA390046DEB8 /* Example.app */,
+				EFC88D811D8579F3005404DC /* SwiftEventBus.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +316,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EFC88D821D8579F3005404DC /* SwiftEventBus-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				EFC88D831D8579F3005404DC /* SwiftEventBus-OSX.h */,
+				EFC88D851D8579F3005404DC /* Info.plist */,
+			);
+			path = "SwiftEventBus-OSX";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -310,6 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6195C5491A85B9AB00E83058 /* SwiftEventBus.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC88D7E1D8579F3005404DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC88D841D8579F3005404DC /* SwiftEventBus-OSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +407,24 @@
 			productReference = 6195C54E1A85B9AB00E83058 /* SwiftEventBusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EFC88D801D8579F3005404DC /* SwiftEventBus-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC88D861D8579F3005404DC /* Build configuration list for PBXNativeTarget "SwiftEventBus-OSX" */;
+			buildPhases = (
+				EFC88D7C1D8579F3005404DC /* Sources */,
+				EFC88D7D1D8579F3005404DC /* Frameworks */,
+				EFC88D7E1D8579F3005404DC /* Headers */,
+				EFC88D7F1D8579F3005404DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftEventBus-OSX";
+			productName = "SwiftEventBus-OSX";
+			productReference = EFC88D811D8579F3005404DC /* SwiftEventBus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -394,6 +443,9 @@
 					};
 					6195C54D1A85B9AB00E83058 = {
 						CreatedOnToolsVersion = 6.1.1;
+					};
+					EFC88D801D8579F3005404DC = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -419,6 +471,7 @@
 				6195C5421A85B9AB00E83058 /* SwiftEventBus */,
 				6195C54D1A85B9AB00E83058 /* SwiftEventBusTests */,
 				613A66821A85BA390046DEB8 /* Example */,
+				EFC88D801D8579F3005404DC /* SwiftEventBus-OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -473,6 +526,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6195C54C1A85B9AB00E83058 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC88D7F1D8579F3005404DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -554,6 +614,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6195C5561A85B9AB00E83058 /* EventBusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC88D7C1D8579F3005404DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC88D891D857A24005404DC /* SwiftEventBus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +856,56 @@
 			};
 			name = Release;
 		};
+		EFC88D871D8579F3005404DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SwiftEventBus-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.studiohff.SwiftEventBus;
+				PRODUCT_NAME = SwiftEventBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EFC88D881D8579F3005404DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SwiftEventBus-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.studiohff.SwiftEventBus;
+				PRODUCT_NAME = SwiftEventBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -826,6 +944,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EFC88D861D8579F3005404DC /* Build configuration list for PBXNativeTarget "SwiftEventBus-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC88D871D8579F3005404DC /* Debug */,
+				EFC88D881D8579F3005404DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
