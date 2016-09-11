@@ -952,6 +952,7 @@
 				EFC88D881D8579F3005404DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
